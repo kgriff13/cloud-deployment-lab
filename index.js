@@ -2,7 +2,6 @@
 const express = require('express');
 const axios = require('axios');
 const logger = require('morgan');
-var name = 'World';
 
 /*
   Create a new express app. This handles just about all the boilerplate for
@@ -27,7 +26,7 @@ app.get('/', (request, response) => {
 
 app.get('/greeting', (request, response) => {
   // FIXME: If a name is not given, the app says 'Hello undefined'
-  const message = `Hello ${request.query.name}`;
+  const message = `Hello`;
   response.status(200).send(message);
 });
 
