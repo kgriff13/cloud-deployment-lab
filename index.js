@@ -32,7 +32,7 @@ app.get('/greeting', (request, response) => {
 
 app.get('/todo', async (request, response) => {
   try {
-    const todo = await axios.get('https://jsonplaceholder.typicode.com/todos/?num')
+    const todo = await axios.get('https://jsonplaceholder.typicode.com/todos/$num')
       .then(res => res.data);
     response.json(todo);
   } catch (e) {
